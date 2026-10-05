@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.apworld
+mod/.vs/
+mod/build/
+mod/obj/
+mod/include/
+mod/source/YYTK_Shared_Types.cpp
+*.user

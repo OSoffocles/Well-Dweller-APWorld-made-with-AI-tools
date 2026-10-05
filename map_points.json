@@ -1,0 +1,2402 @@
+{
+"Night Garden: The Groundskeeper": [
+56.04,
+31.6,
+"Bosses"
+],
+"The Bog: The Swarm": [
+36.94,
+28.43,
+"Bosses"
+],
+"Gravenvalley: Lida the Terrible": [
+78.09,
+29.87,
+"Bosses"
+],
+"The Drains: Lady of the Drains": [
+51.68,
+39.59,
+"Bosses"
+],
+"The Docks: Creature from the Deep": [
+105.98,
+23.38,
+"Bosses"
+],
+"The Depths: The Colony": [
+105.94,
+35.57,
+"Bosses"
+],
+"Lookout Tower: Starsinger": [
+49.0,
+2.55,
+"Bosses"
+],
+"Autumn Forest: Forest King": [
+80.39,
+8.3,
+"Bosses"
+],
+"Dollmaker's House: The Dollmaker": [
+15.03,
+29.3,
+"Bosses"
+],
+"Burial Vault: Gravedigger": [
+29.01,
+46.65,
+"Bosses"
+],
+"Midnight Drench: Shrine of the Seven Sons": [
+74.98,
+43.24,
+"Bosses"
+],
+"Queen's Castle: Metal Doll": [
+29.06,
+7.47,
+"Bosses"
+],
+"Hunter's Cabin: Slingshot Egg": [
+65.5,
+31.0,
+"Abilities"
+],
+"The Bog: Climb Egg": [
+39.0,
+29.0,
+"Abilities"
+],
+"The Drains: Wind Ride Egg": [
+59.0,
+42.0,
+"Abilities"
+],
+"Desiccated Castle: Hover Egg": [
+106.5,
+53.0,
+"Abilities"
+],
+"Night Garden: Tent Travel": [
+40.5,
+23.5,
+"Abilities"
+],
+"The Docks: Barge (Water Vessel)": [
+94.67,
+22.55,
+"Abilities"
+],
+"Dollmaker's House: Magda (Wall Sling)": [
+16.0,
+44.0,
+"Abilities"
+],
+"Hunter's Cabin: Food": [
+67.53,
+25.02,
+"Key Items"
+],
+"Gravenvalley: Witch Burning Ticket": [
+94.06,
+27.79,
+"Key Items"
+],
+"Autumn Forest: Whisper (Golden Gate Key)": [
+87.95,
+14.38,
+"Key Items"
+],
+"Autumn Forest: Whisper (Looter Feather)": [
+87.95,
+14.38,
+"Key Items"
+],
+"Midnight Drench: Golden Feather (Willow's Friends)": [
+56.5,
+45.0,
+"Key Items"
+],
+"Lookout Tower: Golden Feather (Starsinger)": [
+51.0,
+2.0,
+"Key Items"
+],
+"Autumn Forest: Golden Feather (Forest King)": [
+82.0,
+8.0,
+"Key Items"
+],
+"Burial Vault: Golden Feather (Squinton)": [
+26.22,
+46.62,
+"Key Items"
+],
+"Webdrench Inn: Golden Feather (Inn Exit)": [
+88.0,
+48.0,
+"Key Items"
+],
+"Midnight Drench: Golden Feather (Seven Sons)": [
+72.5,
+43.0,
+"Key Items"
+],
+"Queen's Castle: The Queen's Coin": [
+5.0,
+7.0,
+"Post-game"
+],
+"Queen's Castle: Soar (Trinket Door)": [
+3.0,
+7.0,
+"Post-game"
+],
+"Queen's Castle: Mysterious Markings": [
+3.0,
+5.0,
+"Post-game"
+],
+"Dollmaker's House: Spirit Fragment": [
+12.0,
+22.5,
+"Post-game"
+],
+"Autumn Forest: Spirit Fragment": [
+70.0,
+3.0,
+"Post-game"
+],
+"Desiccated Castle: Spirit Fragment": [
+106.5,
+44.0,
+"Post-game"
+],
+"Spirit Nest: Reward 1": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 2": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 3": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 4": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 5": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 6": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 7": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 8": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 9": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 10": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 11": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 12": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 13": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 14": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 15": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 16": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 17": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 18": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 19": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"Spirit Nest: Reward 20": [
+51.7,
+32.43,
+"Spirit Nest"
+],
+"The Bog: Time Trial": [
+26.0,
+38.0,
+"Time Trials"
+],
+"Night Garden: Time Trial": [
+46.0,
+21.0,
+"Time Trials"
+],
+"Gravenvalley: Time Trial": [
+72.0,
+23.0,
+"Time Trials"
+],
+"Desiccated Castle: Time Trial": [
+69.5,
+49.0,
+"Time Trials"
+],
+"Midnight Drench: Time Trial": [
+89.0,
+37.0,
+"Time Trials"
+],
+"The Docks: Time Trial": [
+102.0,
+11.0,
+"Time Trials"
+],
+"Hunter's Cabin: Time Trial": [
+68.0,
+18.0,
+"Time Trials"
+],
+"Autumn Forest: Time Trial": [
+68.0,
+8.0,
+"Time Trials"
+],
+"Dollmaker's House: Time Trial": [
+14.0,
+34.0,
+"Time Trials"
+],
+"The Drains: Time Trial": [
+48.0,
+35.0,
+"Time Trials"
+],
+"Autumn Forest: Blue Bow": [
+68.75,
+14.71,
+"Trinket"
+],
+"Autumn Forest: Combat Room (AF_17)": [
+71.32,
+8.4,
+"Combat Room"
+],
+"Autumn Forest: Doll's Head": [
+76.44,
+5.44,
+"Trinket"
+],
+"Autumn Forest: Page (The Dollmaker, AF_34)": [
+82.35,
+7.44,
+"Page"
+],
+"Autumn Forest: Spirit (AF_13)": [
+68.54,
+8.21,
+"Spirit"
+],
+"Autumn Forest: Spirit (AF_22)": [
+73.6,
+10.69,
+"Spirit"
+],
+"Autumn Forest: Trinket Slot (AF_02)": [
+56.26,
+11.44,
+"Trinket Slot"
+],
+"Autumn Forest: Trinket Slot (AF_04)": [
+59.86,
+9.44,
+"Trinket Slot"
+],
+"Autumn Forest: Trinket Slot (AF_08)": [
+62.21,
+14.71,
+"Trinket Slot"
+],
+"Autumn Forest: Trinket Slot (AF_24)": [
+71.99,
+9.31,
+"Trinket Slot"
+],
+"Autumn Forest: Trinket Slot (AF_32)": [
+80.26,
+16.91,
+"Trinket Slot"
+],
+"Autumn Forest: Trinket Slot (AF_99)": [
+68.75,
+14.29,
+"Trinket Slot"
+],
+"Autumn Forest: Workshop Token (AF_11)": [
+61.16,
+6.73,
+"Workshop Token"
+],
+"Autumn Forest: Workshop Token (AF_30)": [
+67.79,
+9.47,
+"Workshop Token"
+],
+"Burial Vault: Combat Room (AT_05)": [
+47.19,
+50.38,
+"Combat Room"
+],
+"Burial Vault: Golden Needle": [
+32.75,
+42.24,
+"Trinket"
+],
+"Burial Vault: Page (The Dollmaker, AT_11)": [
+38.94,
+49.58,
+"Page"
+],
+"Burial Vault: Page (The Dollmaker, AT_41)": [
+23.48,
+48.64,
+"Page"
+],
+"Burial Vault: Rusted Compass": [
+46.67,
+41.58,
+"Trinket"
+],
+"Burial Vault: Spirit (AT_10)": [
+40.92,
+48.82,
+"Spirit"
+],
+"Burial Vault: Spirit (AT_19)": [
+45.98,
+46.41,
+"Spirit"
+],
+"Burial Vault: Trinket Slot (AT_03)": [
+51.61,
+51.6,
+"Trinket Slot"
+],
+"Burial Vault: Trinket Slot (AT_06)": [
+45.61,
+52.66,
+"Trinket Slot"
+],
+"Burial Vault: Trinket Slot (AT_07)": [
+41.84,
+51.6,
+"Trinket Slot"
+],
+"Burial Vault: Trinket Slot (AT_08)": [
+41.52,
+53.98,
+"Trinket Slot"
+],
+"Burial Vault: Trinket Slot (AT_15)": [
+31.77,
+48.38,
+"Trinket Slot"
+],
+"Burial Vault: Trinket Slot (AT_18)": [
+47.19,
+46.44,
+"Trinket Slot"
+],
+"Burial Vault: Trinket Slot (AT_InsideTomb_after)": [
+26.09,
+43.31,
+"Trinket Slot"
+],
+"Burial Vault: Workshop Token (AT_09)": [
+42.25,
+49.6,
+"Workshop Token"
+],
+"Burial Vault: Workshop Token (AT_16)": [
+34.75,
+45.6,
+"Workshop Token"
+],
+"Burial Vault: Workshop Token (AT_40)": [
+42.45,
+53.55,
+"Workshop Token"
+],
+"Desiccated Castle: Burnt Shoelace": [
+80.9,
+50.35,
+"Trinket"
+],
+"Desiccated Castle: Looter Part (AC_40)": [
+74.02,
+54.02,
+"Looter Part"
+],
+"Desiccated Castle: Page (The Witch's Bargain, AC_06)": [
+70.2,
+37.12,
+"Page"
+],
+"Desiccated Castle: Page (The Witch's Bargain, AC_12)": [
+76.72,
+46.72,
+"Page"
+],
+"Desiccated Castle: Page (The Witch's Bargain, AC_32)": [
+100.84,
+52.33,
+"Page"
+],
+"Desiccated Castle: Silver Spoon": [
+71.47,
+45.73,
+"Trinket"
+],
+"Desiccated Castle: Spirit (AC_07)": [
+72.2,
+37.65,
+"Spirit"
+],
+"Desiccated Castle: Trinket Slot (AC_02)": [
+67.09,
+40.18,
+"Trinket Slot"
+],
+"Desiccated Castle: Trinket Slot (AC_16)": [
+68.33,
+49.38,
+"Trinket Slot"
+],
+"Desiccated Castle: Trinket Slot (AC_20)": [
+80.1,
+48.47,
+"Trinket Slot"
+],
+"Desiccated Castle: Trinket Slot (AC_22)": [
+88.75,
+51.0,
+"Trinket Slot"
+],
+"Desiccated Castle: Workshop Token (AC_19)": [
+79.39,
+50.47,
+"Workshop Token"
+],
+"Desiccated Castle: Workshop Token (AC_41)": [
+67.53,
+46.62,
+"Workshop Token"
+],
+"Dollmaker's House: Bird-Shaped Button": [
+3.09,
+35.6,
+"Trinket"
+],
+"Dollmaker's House: Combat Room (AU_07)": [
+5.01,
+32.59,
+"Combat Room"
+],
+"Dollmaker's House: Page (The Dollmaker, AU_16)": [
+18.27,
+40.53,
+"Page"
+],
+"Dollmaker's House: Page (The Dollmaker, AU_20)": [
+19.41,
+42.45,
+"Page"
+],
+"Dollmaker's House: Spirit (AU_04)": [
+12.3,
+30.95,
+"Spirit"
+],
+"Dollmaker's House: Trinket Slot (AU_03)": [
+11.2,
+28.4,
+"Trinket Slot"
+],
+"Dollmaker's House: Trinket Slot (AU_18)": [
+23.75,
+36.11,
+"Trinket Slot"
+],
+"Dollmaker's House: Trinket Slot (AU_26)": [
+19.74,
+44.8,
+"Trinket Slot"
+],
+"Dollmaker's House: Workshop Token (AU_12)": [
+13.31,
+36.64,
+"Workshop Token"
+],
+"Dollmaker's House: Workshop Token (AU_15)": [
+14.66,
+34.11,
+"Workshop Token"
+],
+"Gravenvalley: Broken Bell": [
+72.2,
+27.89,
+"Trinket"
+],
+"Gravenvalley: Combat Room (AD_23)": [
+80.94,
+32.13,
+"Combat Room"
+],
+"Gravenvalley: Cracked Marble": [
+83.54,
+22.98,
+"Trinket"
+],
+"Gravenvalley: Looter Part (AD_39)": [
+73.38,
+17.76,
+"Looter Part"
+],
+"Gravenvalley: Molar Tooth": [
+86.9,
+21.71,
+"Trinket"
+],
+"Gravenvalley: Page (The Lookout Tower, AD_30)": [
+94.74,
+27.6,
+"Page"
+],
+"Gravenvalley: Page (The Witch's Bargain, AD_10)": [
+86.31,
+26.67,
+"Page"
+],
+"Gravenvalley: Spirit (AD_12)": [
+86.47,
+29.22,
+"Spirit"
+],
+"Gravenvalley: Trinket Slot (AD_03)": [
+76.61,
+27.31,
+"Trinket Slot"
+],
+"Gravenvalley: Trinket Slot (AD_24)": [
+84.75,
+31.42,
+"Trinket Slot"
+],
+"Gravenvalley: Trinket Slot (AD_26)": [
+71.45,
+22.6,
+"Trinket Slot"
+],
+"Gravenvalley: Trinket Slot (AD_33)": [
+85.75,
+21.62,
+"Trinket Slot"
+],
+"Gravenvalley: Trinket Slot (AD_36)": [
+78.26,
+20.33,
+"Trinket Slot"
+],
+"Gravenvalley: Workshop Token (AD_01)": [
+73.79,
+25.47,
+"Workshop Token"
+],
+"Gravenvalley: Workshop Token (AD_19)": [
+75.58,
+21.67,
+"Workshop Token"
+],
+"Gravenvalley: Workshop Token (AD_28)": [
+91.53,
+29.22,
+"Workshop Token"
+],
+"Hunter's Cabin: Hunter's Locket": [
+59.27,
+23.2,
+"Trinket"
+],
+"Hunter's Cabin: Looter Part (AH_11)": [
+60.94,
+29.5,
+"Looter Part"
+],
+"Hunter's Cabin: Page (The Dollmaker, AH_02)": [
+63.42,
+28.72,
+"Page"
+],
+"Hunter's Cabin: Page (The Witch's Bargain, AH_03)": [
+61.92,
+25.36,
+"Page"
+],
+"Hunter's Cabin: Spirit (AH_15)": [
+67.22,
+18.63,
+"Spirit"
+],
+"Hunter's Cabin: Trinket (AH_05)": [
+62.79,
+25.7,
+"Trinket"
+],
+"Hunter's Cabin: Trinket Slot (AH_18)": [
+61.21,
+22.53,
+"Trinket Slot"
+],
+"Hunter's Cabin: Workshop Token (AH_13)": [
+68.83,
+21.17,
+"Workshop Token"
+],
+"Hunter's Cabin: Workshop Token (AH_23)": [
+69.42,
+26.33,
+"Workshop Token"
+],
+"Lookout Tower: Combat Room (AG_08)": [
+47.91,
+11.67,
+"Combat Room"
+],
+"Lookout Tower: Flight Time Upgrade (AG_11)": [
+41.79,
+10.09,
+"Flight Time Upgrade"
+],
+"Lookout Tower: Flight Time Upgrade (AG_17)": [
+37.35,
+7.53,
+"Flight Time Upgrade"
+],
+"Lookout Tower: Flight Time Upgrade (AG_24)": [
+52.84,
+5.41,
+"Flight Time Upgrade"
+],
+"Lookout Tower: Moon Song (AG_07)": [
+45.42,
+13.09,
+"Moon Song"
+],
+"Lookout Tower: Moon Song (AG_23)": [
+52.65,
+7.35,
+"Moon Song"
+],
+"Lookout Tower: Page (The Lookout Tower, AG_10)": [
+44.64,
+7.33,
+"Page"
+],
+"Lookout Tower: Page (The Lookout Tower, AG_13)": [
+38.41,
+12.49,
+"Page"
+],
+"Lookout Tower: Spirit (AG_05)": [
+46.74,
+14.57,
+"Spirit"
+],
+"Lookout Tower: Spirit (AG_28)": [
+46.65,
+4.57,
+"Spirit"
+],
+"Lookout Tower: Trinket Slot (AG_22)": [
+54.67,
+7.49,
+"Trinket Slot"
+],
+"Lookout Tower: Workshop Token (AG_17)": [
+36.49,
+7.44,
+"Workshop Token"
+],
+"Lookout Tower: Workshop Token (AG_35)": [
+40.41,
+4.0,
+"Workshop Token"
+],
+"Midnight Drench: Page (The Witch's Bargain, AL_16)": [
+83.95,
+46.31,
+"Page"
+],
+"Midnight Drench: Page (The Witch's Bargain, AL_24)": [
+87.72,
+33.58,
+"Page"
+],
+"Midnight Drench: Spider's Web": [
+62.64,
+46.87,
+"Trinket"
+],
+"Midnight Drench: Spirit (AL_04)": [
+56.54,
+47.62,
+"Spirit"
+],
+"Midnight Drench: Spirit (AL_26)": [
+89.68,
+37.35,
+"Spirit"
+],
+"Midnight Drench: Trinket Slot (AL_05)": [
+60.96,
+43.71,
+"Trinket Slot"
+],
+"Midnight Drench: Trinket Slot (AL_06)": [
+61.76,
+46.31,
+"Trinket Slot"
+],
+"Midnight Drench: Trinket Slot (AL_09)": [
+76.16,
+33.51,
+"Trinket Slot"
+],
+"Midnight Drench: Trinket Slot (AL_10)": [
+74.42,
+33.89,
+"Trinket Slot"
+],
+"Midnight Drench: Trinket Slot (AL_20)": [
+87.14,
+47.58,
+"Trinket Slot"
+],
+"Midnight Drench: Trinket Slot (AL_21)": [
+81.16,
+37.0,
+"Trinket Slot"
+],
+"Midnight Drench: Trinket Slot (AL_22)": [
+83.67,
+35.71,
+"Trinket Slot"
+],
+"Midnight Drench: Workshop Token (AL_23)": [
+85.52,
+33.19,
+"Workshop Token"
+],
+"Night Garden: Bundle of Hair": [
+44.42,
+28.64,
+"Trinket"
+],
+"Night Garden: Combat Room (AN_12)": [
+52.01,
+30.4,
+"Combat Room"
+],
+"Night Garden: Combat Room (AN_13)": [
+54.06,
+29.14,
+"Combat Room"
+],
+"Night Garden: Combat Room (AN_29)": [
+54.38,
+18.17,
+"Combat Room"
+],
+"Night Garden: Glass Shard": [
+57.13,
+18.32,
+"Trinket"
+],
+"Night Garden: Matchstick (AN_03)": [
+45.56,
+23.76,
+"Matchstick"
+],
+"Night Garden: Oil Vial (AN_13)": [
+54.26,
+29.13,
+"Oil Vial"
+],
+"Night Garden: Page (The Lookout Tower, AN_11)": [
+48.13,
+27.46,
+"Page"
+],
+"Night Garden: Page (The Witch's Bargain, AN_08)": [
+52.39,
+25.75,
+"Page"
+],
+"Night Garden: Spirit (AN_12)": [
+52.66,
+30.75,
+"Spirit"
+],
+"Night Garden: Spirit (AN_14)": [
+53.85,
+31.35,
+"Spirit"
+],
+"Night Garden: Spirit (AN_40)": [
+42.24,
+20.82,
+"Spirit"
+],
+"Night Garden: Trinket Slot (AN_17)": [
+56.75,
+28.44,
+"Trinket Slot"
+],
+"Night Garden: Trinket Slot (AN_18)": [
+59.12,
+30.71,
+"Trinket Slot"
+],
+"Night Garden: Trinket Slot (AN_20)": [
+44.75,
+23.44,
+"Trinket Slot"
+],
+"Night Garden: Trinket Slot (AN_22)": [
+45.24,
+21.24,
+"Trinket Slot"
+],
+"Night Garden: Trinket Slot (AN_27)": [
+51.05,
+17.47,
+"Trinket Slot"
+],
+"Night Garden: Trinket Slot (AN_28)": [
+52.94,
+19.41,
+"Trinket Slot"
+],
+"Night Garden: Trinket Slot (AN_30)": [
+48.23,
+20.43,
+"Trinket Slot"
+],
+"Night Garden: Workshop Token (AN_50)": [
+44.13,
+30.47,
+"Workshop Token"
+],
+"Queen's Castle: Combat Room (AQ_27)": [
+10.97,
+4.38,
+"Combat Room"
+],
+"Queen's Castle: Ilda's Siblings (AQ_15)": [
+31.12,
+6.9,
+"Ilda's Siblings"
+],
+"Queen's Castle: Ilda's Siblings (AQ_21)": [
+16.41,
+13.56,
+"Ilda's Siblings"
+],
+"Queen's Castle: Ilda's Siblings (AQ_29)": [
+16.12,
+2.9,
+"Ilda's Siblings"
+],
+"Queen's Castle: Page (The Witch's Bargain, AQ_06)": [
+18.35,
+10.26,
+"Page"
+],
+"Queen's Castle: Trinket Slot (AQ_25)": [
+18.65,
+6.18,
+"Trinket Slot"
+],
+"Queen's Castle: Workshop Token (AQ_24)": [
+15.94,
+5.8,
+"Workshop Token"
+],
+"The Bog: Combat Room (AB_26)": [
+31.05,
+23.36,
+"Combat Room"
+],
+"The Bog: Hair Pin": [
+35.3,
+40.93,
+"Trinket"
+],
+"The Bog: Looter Part (AB_42)": [
+27.46,
+16.29,
+"Looter Part"
+],
+"The Bog: Page (The Dollmaker, AB_11)": [
+28.93,
+35.6,
+"Page"
+],
+"The Bog: Page (The Dollmaker, AB_12)": [
+27.45,
+36.13,
+"Page"
+],
+"The Bog: Scrap of Fabric": [
+34.69,
+33.24,
+"Trinket"
+],
+"The Bog: Spirit (AB_26)": [
+31.75,
+23.62,
+"Spirit"
+],
+"The Bog: Spirit (AB_31)": [
+25.48,
+38.21,
+"Spirit"
+],
+"The Bog: Trinket Slot (AB_10)": [
+27.56,
+37.43,
+"Trinket Slot"
+],
+"The Bog: Trinket Slot (AB_13)": [
+26.26,
+33.62,
+"Trinket Slot"
+],
+"The Bog: Trinket Slot (AB_19)": [
+35.75,
+29.18,
+"Trinket Slot"
+],
+"The Bog: Workshop Token (AB_14)": [
+24.38,
+33.22,
+"Workshop Token"
+],
+"The Bog: Workshop Token (AB_21)": [
+31.41,
+27.58,
+"Workshop Token"
+],
+"The Depths: Page (The Lookout Tower, AE_15)": [
+104.2,
+29.53,
+"Page"
+],
+"The Depths: Torpedo (AE_03)": [
+102.46,
+28.0,
+"Torpedo"
+],
+"The Depths: Trinket Slot (AE_07)": [
+95.9,
+27.53,
+"Trinket Slot"
+],
+"The Depths: Trinket Slot (AE_14)": [
+106.0,
+29.47,
+"Trinket Slot"
+],
+"The Docks: Combat Room (AK_03)": [
+92.28,
+22.32,
+"Combat Room"
+],
+"The Docks: Combat Room (AK_22)": [
+104.14,
+20.6,
+"Combat Room"
+],
+"The Docks: Nails with Twine": [
+105.57,
+16.49,
+"Trinket"
+],
+"The Docks: Pearl (AK_15)": [
+101.39,
+16.67,
+"Pearl"
+],
+"The Docks: Pearl (AK_20)": [
+93.24,
+9.73,
+"Pearl"
+],
+"The Docks: Pearl (AK_31)": [
+97.97,
+9.71,
+"Pearl"
+],
+"The Docks: Postage Stamp": [
+99.79,
+11.73,
+"Trinket"
+],
+"The Docks: Spirit (AK_11)": [
+99.01,
+18.76,
+"Spirit"
+],
+"The Docks: Spirit (AK_25)": [
+102.45,
+15.69,
+"Spirit"
+],
+"The Docks: Trinket Slot (AK_04)": [
+94.65,
+19.42,
+"Trinket Slot"
+],
+"The Docks: Trinket Slot (AK_16)": [
+97.59,
+15.73,
+"Trinket Slot"
+],
+"The Docks: Trinket Slot (AK_28)": [
+102.53,
+11.38,
+"Trinket Slot"
+],
+"The Docks: Workshop Token (AK_12)": [
+101.54,
+18.02,
+"Workshop Token"
+],
+"The Docks: Workshop Token (AK_18)": [
+93.11,
+15.49,
+"Workshop Token"
+],
+"The Drains: Candied Egg (AP_15)": [
+52.05,
+35.71,
+"Candied Egg"
+],
+"The Drains: Candied Egg (AP_21)": [
+62.0,
+34.5,
+"Candied Egg"
+],
+"The Drains: Combat Room (AP_11)": [
+56.98,
+41.33,
+"Combat Room"
+],
+"The Drains: Elevator Part (AP_16)": [
+52.24,
+33.61,
+"Elevator Part"
+],
+"The Drains: Elevator Part (AP_22)": [
+62.23,
+31.73,
+"Elevator Part"
+],
+"The Drains: Elevator Part (AP_28)": [
+41.33,
+39.85,
+"Elevator Part"
+],
+"The Drains: Fish Hook": [
+47.58,
+35.55,
+"Trinket"
+],
+"The Drains: Looter Part (AP_35)": [
+70.09,
+34.44,
+"Looter Part"
+],
+"The Drains: Melted Candle": [
+64.75,
+37.09,
+"Trinket"
+],
+"The Drains: Spirit (AP_08)": [
+53.17,
+37.44,
+"Spirit"
+],
+"The Drains: Trinket Slot (AP_06)": [
+47.49,
+40.18,
+"Trinket Slot"
+],
+"The Drains: Trinket Slot (AP_10)": [
+54.34,
+41.49,
+"Trinket Slot"
+],
+"The Drains: Trinket Slot (AP_18)": [
+59.01,
+37.13,
+"Trinket Slot"
+],
+"The Drains: Trinket Slot (AP_19)": [
+61.74,
+36.18,
+"Trinket Slot"
+],
+"The Drains: Trinket Slot (AP_25)": [
+56.15,
+33.62,
+"Trinket Slot"
+],
+"The Drains: Trinket Slot (AP_33)": [
+68.54,
+32.18,
+"Trinket Slot"
+],
+"The Drains: Workshop Token (AP_41)": [
+63.73,
+40.0,
+"Workshop Token"
+],
+"The Well: Combat Room (AZ_98)": [
+37.95,
+20.07,
+"Combat Room"
+],
+"Webdrench Inn: Combat Room (AW_18)": [
+95.97,
+36.36,
+"Combat Room"
+],
+"Webdrench Inn: Ember Vial": [
+99.3,
+37.73,
+"Trinket"
+],
+"Webdrench Inn: Insect Wing": [
+91.49,
+42.44,
+"Trinket"
+],
+"Webdrench Inn: Trinket Slot (AW_01)": [
+92.26,
+45.33,
+"Trinket Slot"
+],
+"Webdrench Inn: Trinket Slot (AW_02)": [
+96.42,
+45.64,
+"Trinket Slot"
+],
+"Webdrench Inn: Trinket Slot (AW_05)": [
+101.45,
+43.6,
+"Trinket Slot"
+],
+"Webdrench Inn: Workshop Token (AW_20)": [
+100.6,
+35.76,
+"Workshop Token"
+],
+"Webdrench Inn: Workshop Token (AW_31)": [
+92.26,
+43.84,
+"Workshop Token"
+],
+"Autumn Forest: Big Vessel (AF_17)": [
+69.31,
+7.76,
+"Vessels"
+],
+"Autumn Forest: Lever (AF_06)": [
+65.8,
+13.61,
+"Levers"
+],
+"Autumn Forest: Lever (AF_17)": [
+70.08,
+7.96,
+"Levers"
+],
+"Autumn Forest: Lever (AF_20)": [
+78.46,
+8.35,
+"Levers"
+],
+"Autumn Forest: Lever (AF_21)": [
+78.43,
+11.48,
+"Levers"
+],
+"Autumn Forest: Lever (AF_24)": [
+72.74,
+11.42,
+"Levers"
+],
+"Autumn Forest: Lever (AF_32)": [
+80.64,
+16.35,
+"Levers"
+],
+"Autumn Forest: Vessel (AF_13 #1)": [
+68.68,
+8.3,
+"Vessels"
+],
+"Autumn Forest: Vessel (AF_13 #2)": [
+68.39,
+8.29,
+"Vessels"
+],
+"Autumn Forest: Vessel (AF_17)": [
+69.56,
+7.76,
+"Vessels"
+],
+"Burial Vault: Big Vessel (AT_09)": [
+42.54,
+47.89,
+"Vessels"
+],
+"Burial Vault: Big Vessel (AT_13)": [
+35.56,
+45.89,
+"Vessels"
+],
+"Burial Vault: Big Vessel (AT_29)": [
+23.07,
+46.69,
+"Vessels"
+],
+"Burial Vault: Lever (AT_08)": [
+40.34,
+54.74,
+"Levers"
+],
+"Burial Vault: Lever (AT_09)": [
+42.38,
+49.01,
+"Levers"
+],
+"Burial Vault: Lever (AT_15)": [
+31.64,
+48.29,
+"Levers"
+],
+"Burial Vault: Lever (AT_23)": [
+31.37,
+42.75,
+"Levers"
+],
+"Burial Vault: Lever (AT_29 #1)": [
+22.44,
+46.61,
+"Levers"
+],
+"Burial Vault: Lever (AT_29 #2)": [
+23.36,
+46.61,
+"Levers"
+],
+"Burial Vault: Vessel (AT_05)": [
+46.25,
+49.89,
+"Vessels"
+],
+"Burial Vault: Vessel (AT_09)": [
+42.42,
+47.89,
+"Vessels"
+],
+"Burial Vault: Vessel (AT_11)": [
+39.03,
+48.42,
+"Vessels"
+],
+"Burial Vault: Vessel (AT_22)": [
+30.31,
+41.69,
+"Vessels"
+],
+"Burial Vault: Vessel (AT_29)": [
+22.73,
+46.69,
+"Vessels"
+],
+"Desiccated Castle: Big Vessel (AC_08)": [
+72.75,
+41.69,
+"Vessels"
+],
+"Desiccated Castle: Big Vessel (AC_12)": [
+77.78,
+46.89,
+"Vessels"
+],
+"Desiccated Castle: Big Vessel (AC_33)": [
+105.19,
+53.29,
+"Vessels"
+],
+"Desiccated Castle: Lever (AC_03 #1)": [
+70.27,
+41.48,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_03 #2)": [
+68.89,
+41.48,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_05 #1)": [
+69.66,
+39.75,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_05 #2)": [
+70.42,
+39.75,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_10)": [
+73.95,
+47.69,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_11)": [
+75.33,
+47.75,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_12)": [
+77.75,
+47.75,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_21)": [
+81.26,
+51.62,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_29)": [
+83.42,
+50.68,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_31)": [
+93.29,
+52.89,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_35)": [
+74.88,
+52.75,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_37)": [
+69.91,
+53.75,
+"Levers"
+],
+"Desiccated Castle: Lever (AC_50)": [
+105.96,
+49.75,
+"Levers"
+],
+"Desiccated Castle: Vessel (AC_04)": [
+68.42,
+38.9,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_06 #1)": [
+70.69,
+37.69,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_06 #2)": [
+69.71,
+37.69,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_09)": [
+69.26,
+46.56,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_16 #1)": [
+68.36,
+49.7,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_16 #2)": [
+68.44,
+49.7,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_16 #3)": [
+68.28,
+49.7,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_33)": [
+105.31,
+53.29,
+"Vessels"
+],
+"Dollmaker's House: Big Vessel (AU_14)": [
+18.71,
+37.36,
+"Vessels"
+],
+"Dollmaker's House: Big Vessel (AU_24)": [
+19.32,
+47.36,
+"Vessels"
+],
+"Dollmaker's House: Lever (AU_08)": [
+3.75,
+35.74,
+"Levers"
+],
+"Dollmaker's House: Lever (AU_09)": [
+6.85,
+34.41,
+"Levers"
+],
+"Dollmaker's House: Lever (AU_11)": [
+11.49,
+34.48,
+"Levers"
+],
+"Dollmaker's House: Lever (AU_16)": [
+19.47,
+41.14,
+"Levers"
+],
+"Dollmaker's House: Lever (AU_20)": [
+19.84,
+43.74,
+"Levers"
+],
+"Dollmaker's House: Vessel (AU_14)": [
+18.48,
+37.36,
+"Vessels"
+],
+"Dollmaker's House: Vessel (AU_15 #1)": [
+14.75,
+34.29,
+"Vessels"
+],
+"Dollmaker's House: Vessel (AU_15 #2)": [
+14.67,
+34.3,
+"Vessels"
+],
+"Dollmaker's House: Vessel (AU_15 #3)": [
+14.58,
+34.29,
+"Vessels"
+],
+"Dollmaker's House: Vessel (AU_24)": [
+19.41,
+47.36,
+"Vessels"
+],
+"Gravenvalley: Big Vessel (AD_04)": [
+77.58,
+27.16,
+"Vessels"
+],
+"Gravenvalley: Big Vessel (AD_25)": [
+85.48,
+31.23,
+"Vessels"
+],
+"Gravenvalley: Big Vessel (AD_37)": [
+79.75,
+18.29,
+"Vessels"
+],
+"Gravenvalley: Lever (AD_05)": [
+79.9,
+27.75,
+"Levers"
+],
+"Gravenvalley: Lever (AD_12)": [
+87.2,
+30.75,
+"Levers"
+],
+"Gravenvalley: Lever (AD_15)": [
+82.3,
+29.62,
+"Levers"
+],
+"Gravenvalley: Lever (AD_19)": [
+75.89,
+20.76,
+"Levers"
+],
+"Gravenvalley: Lever (AD_20)": [
+73.69,
+29.29,
+"Levers"
+],
+"Gravenvalley: Lever (AD_22)": [
+82.4,
+25.62,
+"Levers"
+],
+"Gravenvalley: Lever (AD_24)": [
+83.89,
+32.75,
+"Levers"
+],
+"Gravenvalley: Lever (AD_35 #1)": [
+87.26,
+21.42,
+"Levers"
+],
+"Gravenvalley: Lever (AD_35 #2)": [
+86.53,
+21.42,
+"Levers"
+],
+"Gravenvalley: Lever (AD_36)": [
+79.51,
+20.42,
+"Levers"
+],
+"Gravenvalley: Vessel (AD_00)": [
+72.75,
+25.7,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_04)": [
+77.47,
+27.16,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_08)": [
+80.12,
+23.76,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_09)": [
+80.24,
+21.3,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_15)": [
+83.14,
+29.3,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_20)": [
+74.35,
+29.23,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_25)": [
+85.6,
+31.23,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_26 #1)": [
+71.34,
+23.7,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_26 #2)": [
+71.58,
+23.7,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_26 #3)": [
+71.45,
+23.16,
+"Vessels"
+],
+"Hunter's Cabin: Big Vessel (AH_16)": [
+66.1,
+19.91,
+"Vessels"
+],
+"Hunter's Cabin: Big Vessel (AH_18 #1)": [
+60.51,
+21.11,
+"Vessels"
+],
+"Hunter's Cabin: Big Vessel (AH_18 #2)": [
+60.64,
+22.71,
+"Vessels"
+],
+"Hunter's Cabin: Lever (AH_10)": [
+59.95,
+23.3,
+"Levers"
+],
+"Hunter's Cabin: Lever (AH_18)": [
+61.21,
+22.28,
+"Levers"
+],
+"Hunter's Cabin: Vessel (AH_08)": [
+65.78,
+31.18,
+"Vessels"
+],
+"Hunter's Cabin: Vessel (AH_15 #1)": [
+67.33,
+18.71,
+"Vessels"
+],
+"Hunter's Cabin: Vessel (AH_15 #2)": [
+67.11,
+18.71,
+"Vessels"
+],
+"Hunter's Cabin: Vessel (AH_18)": [
+60.25,
+22.71,
+"Vessels"
+],
+"Lookout Tower: Lever (AG_04)": [
+43.93,
+15.5,
+"Levers"
+],
+"Lookout Tower: Lever (AG_06)": [
+41.37,
+13.1,
+"Levers"
+],
+"Lookout Tower: Lever (AG_09)": [
+44.5,
+10.43,
+"Levers"
+],
+"Lookout Tower: Lever (AG_10)": [
+44.26,
+9.57,
+"Levers"
+],
+"Lookout Tower: Lever (AG_13)": [
+39.61,
+13.37,
+"Levers"
+],
+"Lookout Tower: Lever (AG_15)": [
+36.61,
+11.83,
+"Levers"
+],
+"Lookout Tower: Lever (AG_18)": [
+50.15,
+12.75,
+"Levers"
+],
+"Lookout Tower: Lever (AG_27 #1)": [
+43.26,
+4.18,
+"Levers"
+],
+"Lookout Tower: Lever (AG_27 #2)": [
+43.73,
+4.19,
+"Levers"
+],
+"Lookout Tower: Lever (AG_28)": [
+46.75,
+4.56,
+"Levers"
+],
+"Lookout Tower: Vessel (AG_13)": [
+40.52,
+13.18,
+"Vessels"
+],
+"Midnight Drench: Big Vessel (AL_21)": [
+82.49,
+38.36,
+"Vessels"
+],
+"Midnight Drench: Lever (AL_02)": [
+59.75,
+44.62,
+"Levers"
+],
+"Midnight Drench: Lever (AL_03)": [
+57.58,
+46.71,
+"Levers"
+],
+"Midnight Drench: Lever (AL_11)": [
+76.13,
+36.29,
+"Levers"
+],
+"Midnight Drench: Lever (AL_16)": [
+83.84,
+46.49,
+"Levers"
+],
+"Midnight Drench: Lever (AL_25)": [
+85.97,
+36.62,
+"Levers"
+],
+"Midnight Drench: Lever (AL_27)": [
+86.86,
+38.36,
+"Levers"
+],
+"Midnight Drench: Lever (AL_29)": [
+86.54,
+45.28,
+"Levers"
+],
+"Midnight Drench: Lever (AL_31)": [
+84.42,
+43.36,
+"Levers"
+],
+"Midnight Drench: Lever (AL_37)": [
+72.54,
+43.22,
+"Levers"
+],
+"Midnight Drench: Vessel (AL_03)": [
+58.6,
+46.5,
+"Vessels"
+],
+"Midnight Drench: Vessel (AL_04)": [
+55.77,
+47.69,
+"Vessels"
+],
+"Midnight Drench: Vessel (AL_21)": [
+82.42,
+38.36,
+"Vessels"
+],
+"Midnight Drench: Vessel (AL_26 #1)": [
+89.75,
+37.43,
+"Vessels"
+],
+"Midnight Drench: Vessel (AL_26 #2)": [
+89.53,
+37.43,
+"Vessels"
+],
+"Night Garden: Big Vessel (AN_06)": [
+53.5,
+22.96,
+"Vessels"
+],
+"Night Garden: Big Vessel (AN_10)": [
+49.9,
+27.03,
+"Vessels"
+],
+"Night Garden: Big Vessel (AN_22)": [
+45.5,
+20.76,
+"Vessels"
+],
+"Night Garden: Big Vessel (AN_24)": [
+45.17,
+30.76,
+"Vessels"
+],
+"Night Garden: Big Vessel (AN_40)": [
+41.92,
+21.16,
+"Vessels"
+],
+"Night Garden: Lever (AN_04)": [
+48.41,
+23.62,
+"Levers"
+],
+"Night Garden: Lever (AN_06)": [
+53.81,
+22.36,
+"Levers"
+],
+"Night Garden: Lever (AN_12)": [
+50.34,
+30.02,
+"Levers"
+],
+"Night Garden: Lever (AN_16)": [
+52.32,
+32.75,
+"Levers"
+],
+"Night Garden: Lever (AN_25)": [
+44.56,
+28.75,
+"Levers"
+],
+"Night Garden: Lever (AN_26)": [
+51.36,
+19.55,
+"Levers"
+],
+"Night Garden: Lever (AN_32 #1)": [
+56.78,
+18.32,
+"Levers"
+],
+"Night Garden: Lever (AN_32 #2)": [
+57.47,
+18.32,
+"Levers"
+],
+"Night Garden: Lever (AN_40)": [
+41.55,
+21.75,
+"Levers"
+],
+"Night Garden: Vessel (AN_03)": [
+46.95,
+24.5,
+"Vessels"
+],
+"Night Garden: Vessel (AN_04)": [
+50.05,
+22.37,
+"Vessels"
+],
+"Night Garden: Vessel (AN_09)": [
+50.75,
+24.5,
+"Vessels"
+],
+"Night Garden: Vessel (AN_22 #1)": [
+45.18,
+21.56,
+"Vessels"
+],
+"Night Garden: Vessel (AN_22 #2)": [
+45.35,
+21.57,
+"Vessels"
+],
+"Night Garden: Vessel (AN_22 #3)": [
+45.26,
+21.57,
+"Vessels"
+],
+"Night Garden: Vessel (AN_23)": [
+48.27,
+31.56,
+"Vessels"
+],
+"Night Garden: Vessel (AN_29)": [
+55.58,
+17.63,
+"Vessels"
+],
+"Night Garden: Vessel (AN_40)": [
+42.38,
+20.89,
+"Vessels"
+],
+"Queen's Castle: Big Vessel (AQ_13)": [
+27.45,
+6.92,
+"Vessels"
+],
+"Queen's Castle: Big Vessel (AQ_28)": [
+13.03,
+2.91,
+"Vessels"
+],
+"Queen's Castle: Big Vessel (AQ_41)": [
+4.81,
+6.65,
+"Vessels"
+],
+"Queen's Castle: Lever (AQ_03)": [
+22.02,
+8.24,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_07)": [
+16.68,
+11.75,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_08)": [
+22.48,
+5.11,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_13)": [
+27.12,
+7.51,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_15)": [
+31.41,
+7.38,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_21)": [
+16.23,
+14.04,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_24)": [
+16.26,
+4.58,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_29)": [
+16.41,
+3.38,
+"Levers"
+],
+"Queen's Castle: Lever (AQ_40)": [
+6.79,
+5.36,
+"Levers"
+],
+"Queen's Castle: Vessel (AQ_03)": [
+22.55,
+8.18,
+"Vessels"
+],
+"Queen's Castle: Vessel (AQ_08)": [
+22.44,
+5.85,
+"Vessels"
+],
+"Queen's Castle: Vessel (AQ_13)": [
+26.79,
+6.92,
+"Vessels"
+],
+"Queen's Castle: Vessel (AQ_41)": [
+4.51,
+6.79,
+"Vessels"
+],
+"The Bog: Big Vessel (AB_28)": [
+34.65,
+26.36,
+"Vessels"
+],
+"The Bog: Big Vessel (AB_46)": [
+38.69,
+26.96,
+"Vessels"
+],
+"The Bog: Lever (AB_11)": [
+28.43,
+36.49,
+"Levers"
+],
+"The Bog: Lever (AB_16)": [
+31.35,
+34.29,
+"Levers"
+],
+"The Bog: Lever (AB_19)": [
+35.55,
+28.09,
+"Levers"
+],
+"The Bog: Lever (AB_38)": [
+26.56,
+19.82,
+"Levers"
+],
+"The Bog: Lever (AB_39)": [
+29.98,
+19.99,
+"Levers"
+],
+"The Bog: Vessel (AB_08)": [
+31.71,
+39.57,
+"Vessels"
+],
+"The Bog: Vessel (AB_28)": [
+34.57,
+26.36,
+"Vessels"
+],
+"The Bog: Vessel (AB_29)": [
+39.5,
+28.76,
+"Vessels"
+],
+"The Bog: Vessel (AB_30)": [
+34.66,
+22.9,
+"Vessels"
+],
+"The Bog: Vessel (AB_31 #1)": [
+25.35,
+38.56,
+"Vessels"
+],
+"The Bog: Vessel (AB_31 #2)": [
+25.62,
+38.56,
+"Vessels"
+],
+"The Bog: Vessel (AB_31 #3)": [
+25.49,
+38.56,
+"Vessels"
+],
+"The Bog: Vessel (AB_38 #1)": [
+26.78,
+19.63,
+"Vessels"
+],
+"The Bog: Vessel (AB_38 #2)": [
+27.86,
+19.63,
+"Vessels"
+],
+"The Bog: Vessel (AB_46)": [
+39.48,
+26.56,
+"Vessels"
+],
+"The Depths: Lever (AE_11 #1)": [
+102.45,
+29.86,
+"Levers"
+],
+"The Depths: Lever (AE_11 #2)": [
+101.73,
+29.85,
+"Levers"
+],
+"The Depths: Vessel (AE_07)": [
+97.13,
+29.14,
+"Vessels"
+],
+"The Docks: Lever (AK_04)": [
+94.46,
+19.09,
+"Levers"
+],
+"The Docks: Lever (AK_10)": [
+98.64,
+20.74,
+"Levers"
+],
+"The Docks: Lever (AK_12)": [
+101.07,
+17.28,
+"Levers"
+],
+"The Docks: Lever (AK_14)": [
+100.6,
+23.22,
+"Levers"
+],
+"The Docks: Lever (AK_17)": [
+99.03,
+16.31,
+"Levers"
+],
+"The Docks: Lever (AK_25)": [
+105.38,
+16.75,
+"Levers"
+],
+"The Docks: Lever (AK_30)": [
+99.55,
+11.75,
+"Levers"
+],
+"The Docks: Vessel (AK_05)": [
+93.18,
+21.64,
+"Vessels"
+],
+"The Docks: Vessel (AK_23)": [
+103.75,
+19.1,
+"Vessels"
+],
+"The Docks: Vessel (AK_28 #1)": [
+102.62,
+11.44,
+"Vessels"
+],
+"The Docks: Vessel (AK_28 #2)": [
+102.7,
+11.44,
+"Vessels"
+],
+"The Drains: Big Vessel (AP_18)": [
+58.38,
+37.19,
+"Vessels"
+],
+"The Drains: Big Vessel (AP_28)": [
+40.66,
+40.32,
+"Vessels"
+],
+"The Drains: Lever (AP_05)": [
+49.3,
+38.75,
+"Levers"
+],
+"The Drains: Lever (AP_25)": [
+55.86,
+33.71,
+"Levers"
+],
+"The Drains: Lever (AP_26)": [
+45.94,
+40.75,
+"Levers"
+],
+"The Drains: Lever (AP_30)": [
+54.02,
+44.91,
+"Levers"
+],
+"The Drains: Lever (AP_32)": [
+68.64,
+34.98,
+"Levers"
+],
+"The Drains: Vessel (AP_24 #1)": [
+47.71,
+35.73,
+"Vessels"
+],
+"The Drains: Vessel (AP_24 #2)": [
+47.41,
+35.73,
+"Vessels"
+],
+"The Drains: Vessel (AP_28)": [
+40.59,
+40.32,
+"Vessels"
+],
+"Webdrench Inn: Big Vessel (AW_16)": [
+90.71,
+37.02,
+"Vessels"
+],
+"Webdrench Inn: Lever (AW_05)": [
+102.04,
+45.55,
+"Levers"
+],
+"Webdrench Inn: Lever (AW_06)": [
+100.35,
+42.61,
+"Levers"
+],
+"Webdrench Inn: Lever (AW_12)": [
+97.6,
+37.54,
+"Levers"
+],
+"Webdrench Inn: Lever (AW_16)": [
+91.6,
+37.34,
+"Levers"
+],
+"Webdrench Inn: Lever (AW_26)": [
+91.78,
+42.55,
+"Levers"
+],
+"Webdrench Inn: Vessel (AW_12)": [
+97.51,
+38.02,
+"Vessels"
+],
+"Webdrench Inn: Vessel (AW_16)": [
+90.86,
+37.02,
+"Vessels"
+],
+"The Bog: Vessel (AB_03)": [
+37.75,
+36.44,
+"Vessels"
+],
+"The Bog: Big Vessel (AB_05)": [
+32.3,
+37.22,
+"Vessels"
+],
+"The Bog: Big Vessel (AB_05 #2)": [
+32.75,
+36.96,
+"Vessels"
+],
+"The Bog: Vessel (AB_05)": [
+32.75,
+36.96,
+"Vessels"
+],
+"The Bog: Big Vessel (AB_22)": [
+29.63,
+26.89,
+"Vessels"
+],
+"The Bog: Vessel (AB_22)": [
+29.77,
+27.03,
+"Vessels"
+],
+"The Bog: Vessel (AB_24)": [
+25.75,
+29.96,
+"Vessels"
+],
+"The Bog: Big Vessel (AB_25)": [
+30.6,
+24.36,
+"Vessels"
+],
+"Desiccated Castle: Big Vessel (AC_04)": [
+67.18,
+38.76,
+"Vessels"
+],
+"Desiccated Castle: Vessel (AC_29)": [
+82.26,
+50.49,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_15 #2)": [
+81.17,
+30.24,
+"Vessels"
+],
+"Gravenvalley: Vessel (AD_20 #2)": [
+73.67,
+27.63,
+"Vessels"
+],
+"The Depths: Vessel (AE_05)": [
+94.75,
+25.8,
+"Vessels"
+],
+"Autumn Forest: Vessel (AF_03)": [
+59.25,
+13.36,
+"Vessels"
+],
+"Autumn Forest: Big Vessel (AF_03)": [
+59.31,
+13.36,
+"Vessels"
+],
+"Lookout Tower: Vessel (AG_02)": [
+43.61,
+19.51,
+"Vessels"
+],
+"Midnight Drench: Vessel (AL_02)": [
+59.6,
+44.49,
+"Vessels"
+],
+"The Drains: Big Vessel (AP_04)": [
+47.62,
+37.85,
+"Vessels"
+],
+"The Drains: Vessel (AP_09)": [
+56.33,
+39.66,
+"Vessels"
+],
+"Dollmaker's House: Vessel (AU_01)": [
+18.71,
+28.39,
+"Vessels"
+]
+}
