@@ -34,7 +34,7 @@
 using namespace Aurie;
 using namespace YYTK;
 
-static constexpr const char* MOD_VERSION = "0.1.0";
+static constexpr const char* MOD_VERSION = "0.1.4";
 
 static YYTKInterface* g_Yytk = nullptr;
 static fs::path g_Dir;
@@ -664,65 +664,25 @@ static void ManageLevers(const std::string& Room, ULONGLONG Now)
 	}
 }
 
-// The map shows a lock icon (a global.map_marks entry with a lock sprite) on a gate the player has seen closed.
-// Pulling the lever removes it in the game; a gate opened by its lever item keeps it, so remove lock marks that sit
-// on a gate whose lever key is set. Runs once per load, on room changes and whenever a lever item opens a gate.
-static bool g_LockLogDone = false;
-static std::string MarkSpriteName(const RValue& Mark)
-{
-	for (const char* field : { "sprite", "_sprite_zoom", "_sprite" })
-	{
-		RValue v = g_Yytk->CallBuiltin("variable_struct_get", { Mark, RValue(std::string_view(field)) });
-		if (v.IsString()) return std::string(v.ToString());
-		if (v.IsNumberConvertible() && !v.IsUndefined())
-		{
-			RValue n = g_Yytk->CallBuiltin("sprite_get_name", { v });
-			if (n.IsString()) return std::string(n.ToString());
-		}
-	}
-	return "";
-}
-
-static double MarkNumber(const RValue& Mark, const char* Field)
-{
-	RValue v = g_Yytk->CallBuiltin("variable_struct_get", { Mark, RValue(std::string_view(Field)) });
-	return v.IsNumberConvertible() && !v.IsUndefined() ? v.ToDouble() : -1000.0;
-}
-
+// The map shows a lock icon on a gate (o_blockade) the player has seen closed: a global.map_marks entry with the key
+// "<room><x>,<y>" of that gate. The gate removes it only while it plays its opening animation, so a gate opened by
+// its lever item while the player is elsewhere keeps its lock. Remove the locks of every gate whose lever key is set
+// (LEVER_BLOCKADES in Levers.inc). Runs once per load, on room changes and whenever a lever item opens a gate.
 static void ClearGateLocks()
 {
 	if (Opt("lever_items", 0) < 1) return;
 	RValue marks = GlobalValue("map_marks");
 	if (marks.IsUndefined() || !g_Yytk->CallBuiltin("ds_exists", { marks, RValue(1.0) }).ToBoolean()) return;
-	RValue keys = g_Yytk->CallBuiltin("ds_map_keys_to_array", { marks });
-	size_t n = 0;
-	if (!keys.IsArray() || !AurieSuccess(g_Yytk->GetArraySize(keys, n))) return;
 	int removed = 0;
-	bool logAll = !g_LockLogDone;
-	g_LockLogDone = true;
-	for (size_t i = 0; i < n; i++)
+	for (const LeverBlockade& g : LEVER_BLOCKADES)
 	{
-		RValue* k = nullptr;
-		if (!AurieSuccess(g_Yytk->GetArrayEntry(keys, i, k)) || !k) continue;
-		RValue mark = g_Yytk->CallBuiltin("ds_map_find_value", { marks, *k });
-		if (!mark.IsStruct()) continue;
-		std::string spr = MarkSpriteName(mark);
-		if (spr.find("lock") == std::string::npos) continue;
-		RValue roomV = g_Yytk->CallBuiltin("variable_struct_get", { mark, RValue(std::string_view("_room")) });
-		std::string room = roomV.IsString() ? std::string(roomV.ToString()) : "";
-		double x = MarkNumber(mark, "_xpos"), y = MarkNumber(mark, "_ypos");
-		std::string keyText = k->IsString() ? std::string(k->ToString()) : Num(k->ToDouble());
-		if (logAll) Log("map lock mark " + keyText + ": " + spr + " room " + room + " at " + Num(x) + "," + Num(y));
-		for (const LeverGate& g : LEVER_GATES)
-		{
-			double d = std::hypot(x - g.X, y - g.Y);
-			if (!((room == g.Room && d < 3.0) || d < 1.0)) continue;
-			if (!PvarExists(g.Key)) continue;
-			g_Yytk->CallBuiltin("ds_map_delete", { marks, *k });
-			Log("map lock removed at " + keyText + " (gate of " + g.Key + ")");
-			removed++;
-			break;
-		}
+		if (!PvarExists(g.Key)) continue;
+		std::string key = std::string(g.Room) + std::to_string(g.X) + "," + std::to_string(g.Y);
+		RValue k{ std::string_view(key) };
+		if (!g_Yytk->CallBuiltin("ds_map_exists", { marks, k }).ToBoolean()) continue;
+		g_Yytk->CallBuiltin("ds_map_delete", { marks, k });
+		Log("map lock removed: " + key + " (gate of " + g.Key + ")");
+		removed++;
 	}
 	if (removed)
 	{
@@ -917,13 +877,6 @@ static void ApplyShopPrices(const RValue& Inst)
 	}
 	if (changed)
 	{
-		// the price shown for the selected entry
-		RValue sel = g_Yytk->CallBuiltin("variable_instance_get", { Inst, RValue(std::string_view("sel")) });
-		if (sel.IsNumberConvertible())
-		{
-			int i = static_cast<int>(sel.ToDouble());
-			if (i >= 0 && i < 9) g_Yytk->CallBuiltin("variable_instance_set", { Inst, RValue(std::string_view("sel_cost")), RValue(Opt(NAMES[i], 0)) });
-		}
 		Log("shop prices applied");
 	}
 }
@@ -1567,7 +1520,6 @@ static void Tick()
 		g_InGameSince = now;
 		g_ReportedKeys.clear(); // report everything once per load; the client ignores duplicates
 		g_OldMarksCleaned = false;
-		g_LockLogDone = false;
 	}
 	g_WasInGame = ingame;
 	if (!ingame) g_SaveStatus = "no save loaded";
@@ -1651,6 +1603,114 @@ static void TentExitHotkey(const std::string& Room)
 // F7: dump the variables of the shop / trinket menu objects (to find what marks a menu as open).
 static bool g_F7 = false;
 static int g_F7Count = 0;
+
+// F7 helper: write any GameMaker value (struct, array, ds_map/ds_list/ds_grid) as an indented tree.
+static void DumpTree(std::ofstream& F, const RValue& V, const std::string& Pad, int Depth, int& Budget)
+{
+	if (Budget <= 0) return;
+	if (V.IsStruct())
+	{
+		RValue names = g_Yytk->CallBuiltin("variable_struct_get_names", { V });
+		size_t n = 0;
+		if (names.IsArray() && AurieSuccess(g_Yytk->GetArraySize(names, n)))
+			for (size_t j = 0; j < n && Budget > 0; j++)
+			{
+				RValue* nm = nullptr;
+				if (!AurieSuccess(g_Yytk->GetArrayEntry(names, j, nm)) || !nm) continue;
+				RValue c = g_Yytk->CallBuiltin("variable_struct_get", { V, *nm });
+				F << Pad << "." << nm->ToString() << " = " << Describe(c) << "\n"; Budget--;
+				if (Depth > 0 && (c.IsStruct() || c.IsArray())) DumpTree(F, c, Pad + "  ", Depth - 1, Budget);
+			}
+		return;
+	}
+	if (V.IsArray())
+	{
+		RValue copy = V; size_t n = 0;
+		if (!AurieSuccess(g_Yytk->GetArraySize(copy, n))) return;
+		for (size_t i = 0; i < n && i < 300 && Budget > 0; i++)
+		{
+			RValue* e = nullptr;
+			if (!AurieSuccess(g_Yytk->GetArrayEntry(copy, i, e)) || !e) continue;
+			if (e->IsStruct() || e->IsArray())
+			{
+				F << Pad << "[" << i << "] " << Describe(*e) << "\n"; Budget--;
+				if (Depth > 0) DumpTree(F, *e, Pad + "  ", Depth - 1, Budget);
+			}
+		}
+		return;
+	}
+	// ds structures (refs): map = 1, list = 2, grid = 3; plain numbers are not followed (they could match any ds id)
+	if (V.GetKindName() != "ref") return;
+	if (g_Yytk->CallBuiltin("ds_exists", { V, RValue(1.0) }).ToBoolean())
+	{
+		RValue keys = g_Yytk->CallBuiltin("ds_map_keys_to_array", { V });
+		size_t n = 0;
+		F << Pad << "(ds_map)\n";
+		if (keys.IsArray() && AurieSuccess(g_Yytk->GetArraySize(keys, n)))
+			for (size_t i = 0; i < n && i < 600 && Budget > 0; i++)
+			{
+				RValue* k = nullptr;
+				if (!AurieSuccess(g_Yytk->GetArrayEntry(keys, i, k)) || !k) continue;
+				RValue c = g_Yytk->CallBuiltin("ds_map_find_value", { V, *k });
+				F << Pad << "{" << Describe(*k) << "} = " << Describe(c) << "\n"; Budget--;
+				if (Depth > 0) DumpTree(F, c, Pad + "  ", Depth - 1, Budget);
+			}
+		return;
+	}
+	if (g_Yytk->CallBuiltin("ds_exists", { V, RValue(2.0) }).ToBoolean())
+	{
+		int n = static_cast<int>(Builtin("ds_list_size", { V }));
+		F << Pad << "(ds_list " << n << ")\n";
+		for (int i = 0; i < n && i < 600 && Budget > 0; i++)
+		{
+			RValue c = g_Yytk->CallBuiltin("ds_list_find_value", { V, RValue(static_cast<double>(i)) });
+			F << Pad << "<" << i << "> = " << Describe(c) << "\n"; Budget--;
+			if (Depth > 0) DumpTree(F, c, Pad + "  ", Depth - 1, Budget);
+		}
+		return;
+	}
+	if (g_Yytk->CallBuiltin("ds_exists", { V, RValue(3.0) }).ToBoolean())
+	{
+		int w = static_cast<int>(Builtin("ds_grid_width", { V })), h = static_cast<int>(Builtin("ds_grid_height", { V }));
+		F << Pad << "(ds_grid " << w << "x" << h << ")\n";
+		for (int y = 0; y < h && y < 200 && Budget > 0; y++)
+		{
+			F << Pad;
+			for (int x = 0; x < w && x < 12; x++)
+				F << Describe(g_Yytk->CallBuiltin("ds_grid_get", { V, RValue(static_cast<double>(x)), RValue(static_cast<double>(y)) })) << " | ";
+			F << "\n"; Budget--;
+		}
+	}
+}
+
+// F7 with the map open: everything the map knows about (marks, hidden marks, draw lists), to find the lock icons.
+static void DumpMapData(int N)
+{
+	std::ofstream f(g_Dir / ("f7_map_" + std::to_string(N) + ".txt"), std::ios::trunc);
+	int budget = 20000;
+	for (const char* g : { "map_marks", "map_marks_hidden" })
+	{
+		RValue* v = GlobalRef(g);
+		f << "== global." << g << " = " << (v ? Describe(*v) : std::string("missing")) << "\n";
+		if (v) DumpTree(f, *v, "  ", 3, budget);
+	}
+	RValue mobj = g_Yytk->CallBuiltin("asset_get_index", { RValue(std::string_view("o_Map_Draw")) });
+	RValue minst = g_Yytk->CallBuiltin("instance_find", { mobj, RValue(0.0) });
+	if (minst.IsUndefined() || (minst.IsNumberConvertible() && minst.ToDouble() < 0)) { f << "(map not open)\n"; return; }
+	RValue names = g_Yytk->CallBuiltin("variable_instance_get_names", { minst });
+	size_t n = 0;
+	if (names.IsArray() && AurieSuccess(g_Yytk->GetArraySize(names, n)))
+		for (size_t j = 0; j < n; j++)
+		{
+			RValue* nm = nullptr;
+			if (!AurieSuccess(g_Yytk->GetArrayEntry(names, j, nm)) || !nm) continue;
+			RValue c = g_Yytk->CallBuiltin("variable_instance_get", { minst, *nm });
+			if (c.IsNumberConvertible() && !c.IsUndefined() && !(c.GetKindName() == "ref")) continue;   // plain numbers are in f7_dump
+			f << "== o_Map_Draw." << nm->ToString() << " = " << Describe(c) << "\n";
+			DumpTree(f, c, "  ", 3, budget);
+		}
+}
+
 static void DumpMenusHotkey()
 {
 	bool f7 = (GetAsyncKeyState(VK_F7) & 0x8000) != 0;
@@ -1745,6 +1805,7 @@ static void DumpMenusHotkey()
 			}
 		}
 	}
+	DumpMapData(g_F7Count);
 	g_ShotPending = (g_Dir / ("f7_shot_" + std::to_string(g_F7Count) + ".png")).string();   // saved in the next draw event
 	Log("F7: wrote f7_dump_" + std::to_string(g_F7Count) + ".txt");
 }

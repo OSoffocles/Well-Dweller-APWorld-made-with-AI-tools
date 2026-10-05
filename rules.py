@@ -37,6 +37,14 @@ def wall_sling_gate(s: CollectionState, p: int) -> bool:
     return s.has("Soar", p) or endless(s, p) or (climb(s, p) and wsling(s, p))
 
 
+MOVEMENT = ("Slingshot", "Wind Ride", "Hover", "Wall Sling", "Soar")
+
+
+def abilities(s: CollectionState, p: int) -> int:
+    """Movement abilities held (Climb and Endless Climb count as two)."""
+    return sum(1 for a in MOVEMENT if s.has(a, p)) + min(2, s.count("Progressive Climb", p))
+
+
 def currency_budget(s: CollectionState, p: int) -> float:
     """Estimated currency at 1x from the regions in reach (enemies and vessels need the Matchstick).
     Currency items are not counted."""
@@ -59,6 +67,8 @@ def tag_ok(tag: str, s: CollectionState, p: int, trinkets: list[str]) -> bool:
         return height(s, p)
     if tag == "vert":
         return vert(s, p)
+    if tag == "webdrench":   # getting around Webdrench Inn: Hover + Slingshot + (Climb or Soar)
+        return s.has("Hover", p) and sling(s, p) and (climb(s, p) or s.has("Soar", p))
     if tag == "climb_plus":   # Climb + Slingshot, Climb + Wall Sling, Endless Climb or Soar
         return vert(s, p) or (climb(s, p) and sling(s, p))
     if tag == "hover":

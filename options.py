@@ -142,6 +142,19 @@ class ShopPriceMaximum(Range):
     default = 200
 
 
+class ShopProgression(Choice):
+    """Which Looter's shop checks may hold progression items (for any game in the multiworld).
+    affordable: only purchases that need less than about half of the currency the map gives; pricier ones hold
+    useful items, filler or traps, so nobody waits on a currency grind.
+    all: every shop check.
+    none: no shop check."""
+    display_name = "Shop Progression"
+    option_affordable = 0
+    option_all = 1
+    option_none = 2
+    default = 0
+
+
 class CurrencyItemAmount(Range):
     """How much currency one "Currency" item from the multiworld gives."""
     display_name = "Currency Item Amount"
@@ -259,6 +272,7 @@ class WellDwellerOptions(PerGameCommonOptions):
     shop_prices: ShopPrices
     shop_price_minimum: ShopPriceMinimum
     shop_price_maximum: ShopPriceMaximum
+    shop_progression: ShopProgression
     currency_item_amount: CurrencyItemAmount
     extra_trinket_points: ExtraTrinketPoints
     extra_workshop_tokens: ExtraWorkshopTokens

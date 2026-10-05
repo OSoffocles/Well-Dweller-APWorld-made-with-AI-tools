@@ -2,7 +2,7 @@ from typing import TYPE_CHECKING
 
 from BaseClasses import Entrance, Region
 
-from .data import NG_GATE_LEVER, NG_AN04_LEVER
+from .data import NG_GATE_LEVER, NG_AN04_LEVER, WEBDRENCH_GATE_LEVER
 from .rules import climb, height, sling, vert, wall_sling_gate, wsling
 
 if TYPE_CHECKING:
@@ -13,7 +13,7 @@ REGIONS = [
     "Gravenvalley", "Gravenvalley Interior", "Gravenvalley Witch Burning", "The Drains", "Drains Depths",
     "Midnight Drench", "Desiccated Castle West", "Desiccated Castle East", "Desiccated Castle Lower",
     "The Docks", "Whisper's Hut", "The Depths", "Autumn Forest", "Forest King", "Lookout Tower",
-    "Dollmaker's House", "Burial Vault", "Webdrench Inn", "Queen's Castle", "Queen's Throne", "Queen's Chamber",
+    "Dollmaker's House", "Burial Vault", "Webdrench Inn", "Webdrench Inn Lower", "Queen's Castle", "Queen's Throne", "Queen's Chamber",
 ]
 
 
@@ -72,6 +72,10 @@ def create_regions(world: "WellDwellerWorld") -> None:
     link("Bog Interior", "Dollmaker's House", lambda s: vert(s, p))
     link("Midnight Drench", "Burial Vault", lambda s: wall_sling_gate(s, p))
     link("Night Garden East", "Webdrench Inn", lambda s: wall_sling_gate(s, p))
+    # AW_01-AW_04 and the way out to the Golden Feather chase: behind the AW_05 lever gate (the boss-key gate under
+    # the AW_06 lever only opens from below).
+    aw05 = (lambda s: s.has(WEBDRENCH_GATE_LEVER, p)) if world.options.lever_items else None
+    link("Webdrench Inn", "Webdrench Inn Lower", aw05)
     link("Bog Interior", "Queen's Castle", lambda s: s.has("Golden Feather", p, 7))
     link("Queen's Castle", "Queen's Throne",
          lambda s: s.has("Matchstick", p) and (s.has("Soar", p) or (

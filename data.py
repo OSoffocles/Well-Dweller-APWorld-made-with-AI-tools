@@ -119,13 +119,17 @@ TENT_REGION = {
     "AT": "Burial Vault", "AU": "Dollmaker's House", "AW": "Webdrench Inn",
 }
 # Tents that sit in a deeper part of their area than the area's first region.
-TENT_ROOM_REGION = {"AP_31": "Drains Depths", "AN_14": "Night Garden Lower", "AN_27": "Night Garden Upper"}   # the East elevator part side, below the Wind Ride gaps
+TENT_ROOM_REGION = {"AP_31": "Drains Depths", "AN_14": "Night Garden Lower", "AN_27": "Night Garden Upper",
+                    "AW_01": "Webdrench Inn Lower", "AW_27": "Webdrench Inn Lower"}   # the East elevator part side, below the Wind Ride gaps
 # The lower Night Garden (towards the Groundskeeper, Hunter's Cabin and the Drains) is behind the gate that the
 # AN_06 lever opens. With lever items that gate needs "Lever: Night Garden (AN_06)".
 NG_LOWER_ROOMS = {"AN_08", "AN_09", "AN_10", "AN_11", "AN_12", "AN_13", "AN_14", "AN_16", "AN_17", "AN_18", "AN_23",
                   "AN_24", "AN_25", "AN_50", "AN_Boss"}
 NG_LOWER_NAMED = {"Night Garden: The Groundskeeper"}
 NG_GATE_LEVER = "Lever: Night Garden (AN_06)"
+WEBDRENCH_GATE_LEVER = "Lever: Webdrench Inn (AW_05)"
+WEBDRENCH_LOWER_ROOMS = {"AW_01", "AW_02", "AW_03", "AW_04", "AW_27", "AW_28", "AW_29", "AW_30"}
+WEBDRENCH_LOWER_NAMED = {"Webdrench Inn: Golden Feather (Inn Exit)"}
 NG_AN04_LEVER = "Lever: Night Garden (AN_04)"
 # Past the AN_05 gate (opens when its enemy is killed with the Matchstick): AN_05/AN_06 and the rooms above.
 NG_EAST_ROOMS = {"AN_05", "AN_06"}
@@ -241,7 +245,7 @@ CURRENCY_ESTIMATE: dict[str, int] = {
     "Gravenvalley": 125, "Gravenvalley Interior": 125, "Gravenvalley Witch Burning": 0, "The Drains": 125,
     "Drains Depths": 125, "Midnight Drench": 150, "Desiccated Castle West": 125, "Desiccated Castle East": 125,
     "Desiccated Castle Lower": 125, "The Docks": 125, "Whisper's Hut": 0, "The Depths": 125, "Autumn Forest": 150,
-    "Forest King": 50, "Lookout Tower": 125, "Dollmaker's House": 125, "Burial Vault": 125, "Webdrench Inn": 125,
+    "Forest King": 50, "Lookout Tower": 125, "Dollmaker's House": 125, "Burial Vault": 125, "Webdrench Inn": 125, "Webdrench Inn Lower": 50,
     "Queen's Castle": 150, "Queen's Throne": 0, "Queen's Chamber": 0,
 }
 CURRENCY_SHARE = 0.75

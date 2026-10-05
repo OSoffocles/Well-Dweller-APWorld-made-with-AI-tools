@@ -84,10 +84,11 @@ Flags the game sets that are not mapped to locations yet are listed in `unknown.
   cheaper one (estimated at 1x, divided by the Currency Multiplier). The multiplier applies to all currency,
   Currency items from the multiworld included. Option `shop_prices: randomized` gives every shop entry its own
   price between `shop_price_minimum` and `shop_price_maximum` (percent of vanilla). A purchase that would need
-  more currency than the whole map gives (very high prices, low multiplier) only holds filler.
+  more currency than the whole map gives (very high prices, low multiplier) only holds filler. Shop checks also
+  wait for 2 movement abilities (Climb and Endless Climb count as two) and some of the map. Option `shop_progression` (affordable / all / none): by
+  default only purchases needing less than about half of the map's currency can hold progression items.
 - The mod writes the currency you earn in-game (at 1x, per room) to `archipelago\currency_log.txt`; F10 and
   Currency items are left out. Testers: please send this file along, it sets the shop logic estimates.
-- Known issue: a gate opened by its lever item may still show its lock icon on the map.
 - Currency, filler and Death Link options: currency multiplier and Currency item size, extra copies of
   Trinket Points / Workshop Tokens / Oil Vials / Golden Feathers, filler shares for Currency / boons / traps,
   Death Link Amnesty (deaths before one is sent) and Death Wish (Death Links received before one kills you).

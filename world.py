@@ -3,7 +3,7 @@ from typing import Any, ClassVar
 from BaseClasses import Item, ItemClassification, Location, LocationProgressType, Tutorial
 from worlds.AutoWorld import WebWorld, World
 
-from .data import (TRINKET_MAX_LEVEL, TRINKET_INDEX_ORDER, UPGRADE_ITEMS, LEVER_ITEMS, lever_items_for, STARTING_TENT, TENT_ITEMS, TENTS, TENT_REGION, TENT_ROOM_REGION, TENT_AREA_NEEDS, NG_LOWER_ROOMS, NG_LOWER_NAMED, NG_EAST_ROOMS, NG_UPPER_ROOMS, NG_GATE_LEVER, NG_AN40_LEVER, NG_LOWER_NAMED_LOCS, LOCATION_ROOMS, NAMED_ROOMS, ALL_LOCATIONS, EXTRA_LOCATIONS, FILLER_ITEM, ITEM_GROUPS, ITEM_NAME_TO_ID, ITEMS,
+from .data import (TRINKET_MAX_LEVEL, TRINKET_INDEX_ORDER, UPGRADE_ITEMS, LEVER_ITEMS, lever_items_for, STARTING_TENT, TENT_ITEMS, TENTS, TENT_REGION, TENT_ROOM_REGION, TENT_AREA_NEEDS, NG_LOWER_ROOMS, NG_LOWER_NAMED, NG_EAST_ROOMS, NG_UPPER_ROOMS, WEBDRENCH_LOWER_ROOMS, WEBDRENCH_LOWER_NAMED, NG_GATE_LEVER, NG_AN40_LEVER, NG_LOWER_NAMED_LOCS, LOCATION_ROOMS, NAMED_ROOMS, ALL_LOCATIONS, EXTRA_LOCATIONS, FILLER_ITEM, ITEM_GROUPS, ITEM_NAME_TO_ID, ITEMS,
                    LOCATION_GROUPS, LOCATION_NAME_TO_ID, NAMED, PICKUP_LOCATIONS, TRINKETS)
 from .options import WellDwellerOptions
 from .regions import create_regions
@@ -11,10 +11,13 @@ from .data import SHOP_ENTRIES, VANILLA_SHOP_COSTS, CURRENCY_ESTIMATE, CURRENCY_
 
 MAX_BUDGET = CURRENCY_SHARE * sum(CURRENCY_ESTIMATE.values())
 FORGE_SPREAD = 0.9   # the last forge upgrade needs 90% of the map
+SHOP_START = 0.15      # no shop checks before 15% of the map is in reach ...
+SHOP_EARLY_ABILITIES = 2   # ... and this many movement abilities (keeps the shop from filling the first spheres)
+SHOP_AFFORDABLE = 0.5  # shop_progression: affordable - only checks needing less than half the map hold progression
 SHOP_CAP = 0.95      # no shop check needs more than 95% of the map; one that would only holds filler
 EARLY_GAME = 0.25    # no forge or Spirit Nest checks before a quarter of the map is in reach
 MENU_KEYS = {"Workshop Token", "Spirit"}
-from .rules import currency_budget, make_rule, tag_ok
+from .rules import abilities, currency_budget, make_rule, tag_ok
 
 SHOP_POINTS_IN_LOGIC = 10
 
@@ -166,6 +169,9 @@ class WellDwellerWorld(World):
                     region_name = "Night Garden East"
                 elif room in NG_UPPER_ROOMS:
                     region_name = "Night Garden Upper"
+            if region_name == "Webdrench Inn" and (name in WEBDRENCH_LOWER_NAMED or
+                                                   _location_room(name, d) in WEBDRENCH_LOWER_ROOMS):
+                region_name = "Webdrench Inn Lower"
             region = self.multiworld.get_region(region_name, self.player)
             loc = WellDwellerLocation(self.player, name, LOCATION_NAME_TO_ID[name], region)
             if name in self._shop_capped or d.group == "Shop Trinket Points" and \
@@ -173,7 +179,8 @@ class WellDwellerWorld(World):
                 # Trinket points are sold one after another; later ones need a lot of currency,
                 # so they only ever hold filler.
                 loc.progress_type = LocationProgressType.EXCLUDED
-            rule = make_rule(d.rule, self.player, TRINKETS)
+            rule = make_rule(d.rule + (("webdrench",) if region_name.startswith("Webdrench Inn") else ()),
+                             self.player, TRINKETS)
             if d.group == "Forge":
                 # Forge upgrades follow the map too (not only Workshop Tokens), spread over the whole game, so the early
                 # game never has spheres of only forge checks.
@@ -189,10 +196,19 @@ class WellDwellerWorld(World):
                 # no Workshop Tokens or Spirits in the shop, forge or Spirit Nest: a check there holding what the next
                 # one needs makes chains of spheres with nothing to do on the map
                 loc.item_rule = lambda item: not (item.player == self.player and item.name in MENU_KEYS)
+            if d.group in ("Shop", "Shop Trinket Points"):
+                sp = o.shop_progression
+                if sp == sp.option_none or (sp == sp.option_affordable and
+                                            shop_need.get(name, 0) > SHOP_AFFORDABLE * MAX_BUDGET):
+                    # expensive purchases never hold anyone's progression: nobody waits on a currency grind
+                    loc.item_rule = lambda item: not item.advancement and \
+                        not (item.player == self.player and item.name in MENU_KEYS)
             need = shop_need.get(name, 0)
             if need > 0:
                 base = rule
-                rule = (lambda s, b=base, c=need: currency_budget(s, self.player) >= c and (b is None or b(s)))
+                c = max(need, SHOP_START * MAX_BUDGET)
+                rule = (lambda s, b=base, c=c: abilities(s, self.player) >= SHOP_EARLY_ABILITIES
+                        and currency_budget(s, self.player) >= c and (b is None or b(s)))
             if o.lever_items:
                 # pulling a lever needs its own item too only if its gate stands in the way; levers are
                 # usually on the near side, so a lever's own location does not need its own item
