@@ -298,6 +298,8 @@ LOCATION_TAGS: dict[str, tuple[str, ...]] = {
     "Night Garden: Spirit (AN_14)": ("height",),   # out of reach from the AN_14 tent floor
     "Night Garden: Lever (AN_12)": ("height",),
     "Night Garden: Lever (AN_16)": ("height",),
+    # tester report 2026-10-08: unreachable with no movement abilities, same as the AN_12 lever
+    "Night Garden: Combat Room (AN_12)": ("height",), "Night Garden: Spirit (AN_12)": ("height",),
     "Night Garden: Vessel (AN_04)": ("height",),   # high up in the tent room
     # behind the door the Night Garden time trial opens
     "Night Garden: Vessel (AN_22 #1)": ("climb_plus",), "Night Garden: Vessel (AN_22 #2)": ("climb_plus",),
