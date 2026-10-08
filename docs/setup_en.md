@@ -12,7 +12,8 @@
 
 ## Playing
 1. Open the Archipelago Launcher and start **Well Dweller Client**. Connect to the server with your slot name.
-2. If the client cannot find the game, use `/game_dir <path to the Well Dweller folder>`.
+2. The client looks for the game in the usual Steam and GOG folders. If it cannot find it, use
+   `/game_dir <path to the Well Dweller folder>`, e.g. `/game_dir C:\GOG Games\Well Dweller` (spaces are fine).
 3. Start the game and begin a **new game** in an empty save slot. The mod binds that save to your slot;
    other saves are left alone and send nothing. Use a new save slot for every new seed.
 4. Items arrive while you play. Checks are sent when you pick something up, beat a boss or talk to an NPC.

@@ -16,6 +16,7 @@ from typing import Any
 import Utils
 from CommonClient import (ClientCommandProcessor, CommonContext, get_base_parser, gui_enabled, handle_url_arg, logger,
                           server_loop)
+from MultiServer import mark_raw
 from NetUtils import ClientStatus
 
 from .data import ALL_LOCATIONS, ITEM_NAME_TO_ID, ITEMS, LOCATION_NAME_TO_ID, PICKUP_LOCATIONS, TRINKETS
@@ -25,10 +26,34 @@ GAME = "Well Dweller"
 CONFIG_FILE = "well_dweller_client.json"
 DEFAULT_GAME_DIRS = [
     r"C:\Program Files (x86)\Steam\steamapps\common\Well Dweller",
+    r"C:\Program Files\Steam\steamapps\common\Well Dweller",
     r"D:\Steam\steamapps\common\Well Dweller",
     r"D:\SteamLibrary\steamapps\common\Well Dweller",
     r"E:\SteamLibrary\steamapps\common\Well Dweller",
+    r"C:\GOG Games\Well Dweller",
+    r"D:\GOG Games\Well Dweller",
+    r"C:\Program Files (x86)\GOG Galaxy\Games\Well Dweller",
 ]
+
+
+def find_game_dir() -> str:
+    """The Well Dweller folder: known Steam/GOG locations, then every Steam library (libraryfolders.vdf)."""
+    for d in DEFAULT_GAME_DIRS:
+        if os.path.isfile(os.path.join(d, "WellDweller.exe")):
+            return d
+    import re
+    for steam in (r"C:\Program Files (x86)\Steam", r"C:\Program Files\Steam"):
+        vdf = os.path.join(steam, "steamapps", "libraryfolders.vdf")
+        try:
+            with open(vdf, encoding="utf-8", errors="replace") as f:
+                libraries = re.findall(r'"path"\s+"([^"]+)"', f.read())
+        except OSError:
+            continue
+        for lib in libraries:
+            d = os.path.join(lib.replace("\\\\", "\\"), "steamapps", "common", "Well Dweller")
+            if os.path.isfile(os.path.join(d, "WellDweller.exe")):
+                return d
+    return ""
 
 # Trinket item -> index in the game's upgrade_list arrays (frame order of the s_trinkets sprite);
 # <game>\archipelago\trinket_map.txt ("Name = index" per line) overrides/extends this table.
@@ -160,9 +185,11 @@ def item_color(flags: int) -> str:
 
 
 class WellDwellerCommandProcessor(ClientCommandProcessor):
+    @mark_raw
     def _cmd_game_dir(self, path: str = "") -> bool:
-        """Show or set the Well Dweller install folder."""
+        """Show or set the Well Dweller install folder (spaces are fine, quotes optional)."""
         ctx: WellDwellerContext = self.ctx  # type: ignore[assignment]
+        path = path.strip().strip('"').strip("'")
         if path:
             if not os.path.isdir(path):
                 self.output(f"Folder not found: {path}")
@@ -315,7 +342,7 @@ class WellDwellerContext(CommonContext):
         except (OSError, ValueError):
             pass
         if not self.game_dir:
-            self.game_dir = next((d for d in DEFAULT_GAME_DIRS if os.path.isdir(d)), "")
+            self.game_dir = find_game_dir()
 
     def set_game_dir(self, path: str) -> None:
         self.game_dir = path
